@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace Card_Game
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -20,71 +21,29 @@ namespace Card_Game
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("card.mp3");
 
-            int count_correct_cards = 0;
-            int score = 0;
-
             bool[] count_correct = new bool[4];
+            for (int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; }
 
-            for(int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; }
-
-            btn_back_1.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_back_1.RotateYTo(90, 300);
-                await btn_front_1.RotateYTo(0, 300);
-                count_correct[0] = true;
-            };
-            btn_front_1.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_front_1.RotateYTo(90, 300);
-                await btn_back_1.RotateYTo(0, 300);
-                count_correct[0] = false;
-            };
-            btn_back_2.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_back_2.RotateYTo(90, 300);
-                await btn_front_2.RotateYTo(0, 300);
-                count_correct[1] = true;
-            };
-            btn_front_2.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_front_2.RotateYTo(90, 300);
-                await btn_back_2.RotateYTo(0, 300);
-                count_correct[1] = false;
-            };
-            btn_back_3.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_back_3.RotateYTo(90, 300);
-                await btn_front_3.RotateYTo(0, 300);
-                count_correct[2] = true;
-            };
-            btn_front_3.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_front_3.RotateYTo(90, 300);
-                await btn_back_3.RotateYTo(0, 300);
-                count_correct[2] = false;
-            };
-            btn_back_4.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_back_4.RotateYTo(90, 300);
-                await btn_front_4.RotateYTo(0, 300);
-                count_correct[3] = true;
-            };
-            btn_front_4.Clicked += async (sender, e) =>
-            {
-                player.Play();
-                await btn_front_4.RotateYTo(90, 300);
-                await btn_back_4.RotateYTo(0, 300);
-                count_correct[3] = false;
-            };
-
-
+            btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, count_correct, btn_back_1, btn_front_1); };
+            btn_front_1.Clicked += (sender, e) => { player.Play(); function_front_to_back(0, count_correct, btn_front_1, btn_back_1); };
+            btn_back_2.Clicked += (sender, e) => { player.Play(); function_back_to_front(1, count_correct, btn_back_2, btn_front_2); };
+            btn_front_2.Clicked += (sender, e) => { player.Play(); function_front_to_back(1, count_correct, btn_front_2, btn_back_2); };
+            btn_back_3.Clicked += (sender, e) => { player.Play(); function_back_to_front(2, count_correct, btn_back_3, btn_front_3); };
+            btn_front_3.Clicked += (sender, e) => { player.Play(); function_front_to_back(2, count_correct, btn_front_3, btn_back_3); };
+            btn_back_4.Clicked += (sender, e) => { player.Play(); function_back_to_front(3, count_correct, btn_back_4, btn_front_4); };
+            btn_front_4.Clicked += (sender, e) => { player.Play(); function_front_to_back(3, count_correct, btn_front_4, btn_back_4); };
+        }
+        private async void function_back_to_front(int number, bool[] count_correct, ImageButton btn_back, ImageButton btn_front)
+        {
+            await btn_back.RotateYTo(90, 300);
+            await btn_front.RotateYTo(0, 300);
+            count_correct[number] = true;
+        }
+        private async void function_front_to_back(int number, bool[] count_correct, ImageButton btn_front, ImageButton btn_back)
+        {
+            await btn_front.RotateYTo(90, 300);
+            await btn_back.RotateYTo(0, 300);
+            count_correct[number] = false;
         }
     }
 }
