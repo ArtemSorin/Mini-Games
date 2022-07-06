@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Card_Game.Page">
+             x:Class="Card_Game.CardLevelFirstPage">
     <ScrollView>
-        <StackLayout BackgroundColor="White">
+        <StackLayout BackgroundColor="White" HorizontalOptions="Center">
             <Grid Margin="7, 20, 7, 0" HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="170" />
@@ -17,7 +17,7 @@
                     <RowDefinition Height="250" />
                     <RowDefinition Height="250" />
                 </Grid.RowDefinitions>
-                <ImageButton x:Name="btn_front_1" Source="Jgray.png"  CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_1" Source="Jgray.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_1" Source="cardback.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_front_2" Source="Ared.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_2" Source="cardback.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>

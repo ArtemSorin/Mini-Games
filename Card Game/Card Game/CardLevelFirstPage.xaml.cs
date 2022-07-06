@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +7,13 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-
 namespace Card_Game
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page : ContentPage
+    public partial class CardLevelFirstPage : ContentPage
     {
         int sorce = 0;
-        public Page()
+        public CardLevelFirstPage()
         {
             InitializeComponent();
 
@@ -28,6 +26,8 @@ namespace Card_Game
             for (int i = 0; i < count_nonselected.Length; i++) { count_nonselected[i] = true; }
 
             Sorcepanel.Text = $"Рекорд: {sorce}";
+
+            change_level.Clicked += (sender, e) => { Navigation.PushAsync(new CardLevelSecondPage()); };
 
             btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, count_nonselected, count_correct, btn_back_1, btn_front_1); };
             btn_front_1.Clicked += (sender, e) => { player.Play(); function_front_to_back(0, count_nonselected, count_correct, btn_front_1, btn_back_1); };
@@ -47,9 +47,9 @@ namespace Card_Game
 
             int count = 0;
 
-            for(int i = 0; i < count_correct.Length; i++)
+            for (int i = 0; i < count_correct.Length; i++)
             {
-                if(count_correct[i])
+                if (count_correct[i])
                 {
                     count++;
                 }
