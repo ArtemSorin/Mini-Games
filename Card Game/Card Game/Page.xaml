@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Card_Game.Page">
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="190" />
+                <ColumnDefinition Width="190" />
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="140" />
+                <ColumnDefinition Width="140" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250" />
+                <RowDefinition Height="250" />
+            </Grid.RowDefinitions>
+            <ImageButton x:Name="btn" Source="Group.png" CornerRadius="30" Grid.Column="0"></ImageButton>
+            <ImageButton x:Name="btn1" Clicked="function2" Source="Group.png" CornerRadius="30" Grid.Column="1"></ImageButton>
+            <ImageButton x:Name="btn2" Clicked="function1" Source="Groupx.png" CornerRadius="30" Grid.Column="1"></ImageButton>
+        </Grid>
+    </StackLayout>
+</ContentPage>
