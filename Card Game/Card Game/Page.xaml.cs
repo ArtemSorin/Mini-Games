@@ -16,22 +16,75 @@ namespace Card_Game
         public Page()
         {
             InitializeComponent();
-        }
-        async public void function1(object sender, EventArgs e)
-        {
+
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("card.mp3");
-            player.Play();
-            await btn2.RotateYTo(90, 300);
-            await btn1.RotateYTo(0, 300);
-        }
-        async public void function2(object sender, EventArgs e)
-        {
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-            player.Load("card.mp3");
-            player.Play();
-            await btn1.RotateYTo(90, 300);
-            await btn2.RotateYTo(0, 300);
+
+            int count_correct_cards = 0;
+            int score = 0;
+
+            bool[] count_correct = new bool[4];
+
+            for(int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; }
+
+            btn_back_1.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_back_1.RotateYTo(90, 300);
+                await btn_front_1.RotateYTo(0, 300);
+                count_correct[0] = true;
+            };
+            btn_front_1.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_front_1.RotateYTo(90, 300);
+                await btn_back_1.RotateYTo(0, 300);
+                count_correct[0] = false;
+            };
+            btn_back_2.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_back_2.RotateYTo(90, 300);
+                await btn_front_2.RotateYTo(0, 300);
+                count_correct[1] = true;
+            };
+            btn_front_2.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_front_2.RotateYTo(90, 300);
+                await btn_back_2.RotateYTo(0, 300);
+                count_correct[1] = false;
+            };
+            btn_back_3.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_back_3.RotateYTo(90, 300);
+                await btn_front_3.RotateYTo(0, 300);
+                count_correct[2] = true;
+            };
+            btn_front_3.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_front_3.RotateYTo(90, 300);
+                await btn_back_3.RotateYTo(0, 300);
+                count_correct[2] = false;
+            };
+            btn_back_4.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_back_4.RotateYTo(90, 300);
+                await btn_front_4.RotateYTo(0, 300);
+                count_correct[3] = true;
+            };
+            btn_front_4.Clicked += async (sender, e) =>
+            {
+                player.Play();
+                await btn_front_4.RotateYTo(90, 300);
+                await btn_back_4.RotateYTo(0, 300);
+                count_correct[3] = false;
+            };
+
+
         }
     }
 }
