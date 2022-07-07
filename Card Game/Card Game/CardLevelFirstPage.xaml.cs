@@ -26,7 +26,7 @@ namespace Card_Game
             for (int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; }
             for (int i = 0; i < count_nonselected.Length; i++) { count_nonselected[i] = true; }
 
-            Sorcepanel.Text = $"Рекорд: {sorce}";
+            Sorcepanel.Text = $"Рекорд: {sorce} / 20";
 
             ImageButton[] mas_buttons_card_back = new ImageButton[]
             {
@@ -105,7 +105,7 @@ namespace Card_Game
                 change_level.IsEnabled = true;
             }
 
-            Sorcepanel.Text = $"Рекорд: {sorce}";
+            Sorcepanel.Text = $"Рекорд: {sorce} / 20";
         }
         private async void function_front_to_back(int number, bool[] count_nonselected, bool[] count_correct, ImageButton btn_front, ImageButton btn_back)
         {
@@ -114,7 +114,7 @@ namespace Card_Game
             count_correct[number] = false;
             count_nonselected[number] = true;
 
-            Sorcepanel.Text = $"Рекорд: {sorce}";
+            Sorcepanel.Text = $"Рекорд: {sorce} / 20";
         }
         private async void function_show_cards()
         {
