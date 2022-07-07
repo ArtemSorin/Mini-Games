@@ -22,10 +22,21 @@ namespace Card_Game
 
             bool[] count_correct = new bool[4];
             bool[] count_nonselected = new bool[4];
+
             for (int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; }
             for (int i = 0; i < count_nonselected.Length; i++) { count_nonselected[i] = true; }
 
             Sorcepanel.Text = $"Рекорд: {sorce}";
+
+            ImageButton[] mas_buttons_card_back = new ImageButton[]
+            {
+                btn_back_1, btn_back_2, btn_back_3, btn_back_4
+            };
+
+            ImageButton[] mas_buttons_card_front = new ImageButton[]
+            {
+                btn_front_1, btn_front_2, btn_front_3, btn_front_4
+            };
 
             change_level.Clicked += (sender, e) => { Navigation.PushAsync(new CardLevelSecondPage()); };
             show_cards.Clicked += (sender, e) => { function_show_cards(); };
@@ -41,8 +52,8 @@ namespace Card_Game
         }
         private async void function_back_to_front(int number, bool[] count_nonselected, bool[] count_correct, ImageButton btn_back, ImageButton btn_front)
         {
-            await btn_back.RotateYTo(90, 300);
-            await btn_front.RotateYTo(0, 300);
+            await btn_back.RotateYTo(90, 150);
+            await btn_front.RotateYTo(0, 150);
             count_correct[number] = true;
             count_nonselected[number] = false;
 
@@ -78,8 +89,8 @@ namespace Card_Game
                 }
                 else
                 {
-                    await btn_front.RotateYTo(90, 300);
-                    await btn_back.RotateYTo(0, 300);
+                    await btn_front.RotateYTo(90, 150);
+                    await btn_back.RotateYTo(0, 150);
 
                     count_correct[number] = false;
                     count_nonselected[number] = true;
@@ -98,8 +109,8 @@ namespace Card_Game
         }
         private async void function_front_to_back(int number, bool[] count_nonselected, bool[] count_correct, ImageButton btn_front, ImageButton btn_back)
         {
-            await btn_front.RotateYTo(90, 300);
-            await btn_back.RotateYTo(0, 300);
+            await btn_front.RotateYTo(90, 150);
+            await btn_back.RotateYTo(0, 150);
             count_correct[number] = false;
             count_nonselected[number] = true;
 
@@ -107,31 +118,30 @@ namespace Card_Game
         }
         private async void function_show_cards()
         {
-            await btn_back_1.RotateYTo(90, 300);
-            await btn_front_1.RotateYTo(0, 300);
+            await btn_back_1.RotateYTo(90, 150);
+            await btn_front_1.RotateYTo(0, 150);
 
-            await btn_back_2.RotateYTo(90, 300);
-            await btn_front_2.RotateYTo(0, 300);
+            await btn_back_2.RotateYTo(90, 150);
+            await btn_front_2.RotateYTo(0, 150);
 
-            await btn_back_3.RotateYTo(90, 300);
-            await btn_front_3.RotateYTo(0, 300);
+            await btn_back_3.RotateYTo(90, 150);
+            await btn_front_3.RotateYTo(0, 150);
 
-            await btn_back_4.RotateYTo(90, 300);
-            await btn_front_4.RotateYTo(0, 300);
+            await btn_back_4.RotateYTo(90, 150);
+            await btn_front_4.RotateYTo(0, 150);
 
-            //await Task.Delay(500);
 
-            await btn_front_1.RotateYTo(90, 300);
-            await btn_back_1.RotateYTo(0, 300);
+            await btn_front_1.RotateYTo(90, 150);
+            await btn_back_1.RotateYTo(0, 150);
 
-            await btn_front_2.RotateYTo(90, 300);
-            await btn_back_2.RotateYTo(0, 300);
+            await btn_front_2.RotateYTo(90, 150);
+            await btn_back_2.RotateYTo(0, 150);
 
-            await btn_front_3.RotateYTo(90, 300);
-            await btn_back_3.RotateYTo(0, 300);
+            await btn_front_3.RotateYTo(90, 150);
+            await btn_back_3.RotateYTo(0, 150);
 
-            await btn_front_4.RotateYTo(90, 300);
-            await btn_back_4.RotateYTo(0, 300);
+            await btn_front_4.RotateYTo(90, 150);
+            await btn_back_4.RotateYTo(0, 150);
 
             show_cards.IsEnabled = false;
         }

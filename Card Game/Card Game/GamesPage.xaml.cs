@@ -17,6 +17,7 @@ namespace Card_Game
             InitializeComponent();
 
             card_game.Clicked += (sender, e) => Navigation.PushAsync(new CardLevelFirstPage());
+            country_game.Clicked += (sender, e) => Navigation.PushAsync(new CountryLevelFirstPage());
         }
     }
 }
