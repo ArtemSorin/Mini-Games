@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Card_Game.CardLevelThirdPage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Уровень 3" HorizontalTextAlignment="Center" Margin="0, 0, 75, 0"
+                   FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <Grid Margin="7, 20, 7, 0" HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="120" />
+                <RowDefinition Height="120" />
+                <RowDefinition Height="120" />
+            </Grid.RowDefinitions>
+            <ImageButton x:Name="btn_front_1" Source="ten_of_hearts.png" CornerRadius="20" Grid.Column="0" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_back_1" Source="cardback.png" CornerRadius="20" Grid.Column="0" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_front_2" Source="king_of_spades.png" CornerRadius="20" Grid.Column="1" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_back_2" Source="cardback.png" CornerRadius="20" Grid.Column="1" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_front_3" Source="jack_of_clubs.png" CornerRadius="20" Grid.Column="2" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_back_3" Source="cardback.png" CornerRadius="20" Grid.Column="2" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_front_4" Source="eight_of_spades.png" CornerRadius="20" Grid.Column="3" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_back_4" Source="cardback.png" CornerRadius="20" Grid.Column="3" Grid.Row="0"></ImageButton>
+            <ImageButton x:Name="btn_front_5" Source="nine_of_clubs.png" CornerRadius="20" Grid.Column="0" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_back_5" Source="cardback.png" CornerRadius="20" Grid.Column="0" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_front_6" Source="five_of_clubs.png" CornerRadius="20" Grid.Column="1" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_back_6" Source="cardback.png" CornerRadius="20" Grid.Column="1" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_front_7" Source="nine_of_clubs.png" CornerRadius="20" Grid.Column="2" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_back_7" Source="cardback.png" CornerRadius="20" Grid.Column="2" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_front_8" Source="two_of_clubs.png" CornerRadius="20" Grid.Column="3" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_back_8" Source="cardback.png" CornerRadius="20" Grid.Column="3" Grid.Row="1"></ImageButton>
+            <ImageButton x:Name="btn_front_9" Source="king_of_spades.png" CornerRadius="20" Grid.Column="0" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_back_9" Source="cardback.png" CornerRadius="20" Grid.Column="0" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_front_10" Source="two_of_clubs.png" CornerRadius="20" Grid.Column="1" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_back_10" Source="cardback.png" CornerRadius="20" Grid.Column="1" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_front_11" Source="ten_of_hearts.png" CornerRadius="20" Grid.Column="2" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_back_11" Source="cardback.png" CornerRadius="20" Grid.Column="2" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_front_12" Source="ten_of_diamonds.png" CornerRadius="20" Grid.Column="3" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_back_12" Source="cardback.png" CornerRadius="20" Grid.Column="3" Grid.Row="2"></ImageButton>
+            <ImageButton x:Name="btn_front_13" Source="jack_of_clubs.png" CornerRadius="20" Grid.Column="0" Grid.Row="3"></ImageButton>
+            <ImageButton x:Name="btn_back_13" Source="cardback.png" CornerRadius="20" Grid.Column="0" Grid.Row="3"></ImageButton>
+            <ImageButton x:Name="btn_front_14" Source="ten_of_diamonds.png" CornerRadius="20" Grid.Column="1" Grid.Row="3"></ImageButton>
+            <ImageButton x:Name="btn_back_14" Source="cardback.png" CornerRadius="20" Grid.Column="1" Grid.Row="3"></ImageButton>
+            <ImageButton x:Name="btn_front_15" Source="five_of_clubs.png" CornerRadius="20" Grid.Column="2" Grid.Row="3"></ImageButton>
+            <ImageButton x:Name="btn_back_15" Source="cardback.png" CornerRadius="20" Grid.Column="2" Grid.Row="3"></ImageButton>
+            <ImageButton x:Name="btn_front_16" Source="eight_of_spades.png" CornerRadius="20" Grid.Column="3" Grid.Row="3"></ImageButton>
+            <ImageButton x:Name="btn_back_16" Source="cardback.png" CornerRadius="20" Grid.Column="3" Grid.Row="3"></ImageButton>
+        </Grid>
+        <Frame>
+            <Label x:Name="Sorcepanel"></Label>
+        </Frame>
+        <Grid HorizontalOptions="FillAndExpand" RowSpacing="20" VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="20">
+                <Button x:Name="change_level" BackgroundColor="#1C375C" WidthRequest="150" CornerRadius="30" Grid.Row="0" 
+                            TextColor="White" Text="Следующий уровень" IsEnabled="False"></Button>
+                <Button x:Name="show_cards" BackgroundColor="#1C375C" WidthRequest="150" CornerRadius="30" Grid.Row="0"
+                            TextColor="White" Text="Открыть карты" IsEnabled="True"></Button>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

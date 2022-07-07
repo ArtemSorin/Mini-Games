@@ -28,6 +28,7 @@ namespace Card_Game
             Sorcepanel.Text = $"Рекорд: {sorce}";
 
             change_level.Clicked += (sender, e) => { Navigation.PushAsync(new CardLevelSecondPage()); };
+            show_cards.Clicked += (sender, e) => { function_show_cards(); };
 
             btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, count_nonselected, count_correct, btn_back_1, btn_front_1); };
             btn_front_1.Clicked += (sender, e) => { player.Play(); function_front_to_back(0, count_nonselected, count_correct, btn_front_1, btn_back_1); };
@@ -89,6 +90,7 @@ namespace Card_Game
 
             if (sorce == 20)
             {
+                await DisplayAlert("", "Уровень пройден!", "ок");
                 change_level.IsEnabled = true;
             }
 
@@ -102,6 +104,36 @@ namespace Card_Game
             count_nonselected[number] = true;
 
             Sorcepanel.Text = $"Рекорд: {sorce}";
+        }
+        private async void function_show_cards()
+        {
+            await btn_back_1.RotateYTo(90, 300);
+            await btn_front_1.RotateYTo(0, 300);
+
+            await btn_back_2.RotateYTo(90, 300);
+            await btn_front_2.RotateYTo(0, 300);
+
+            await btn_back_3.RotateYTo(90, 300);
+            await btn_front_3.RotateYTo(0, 300);
+
+            await btn_back_4.RotateYTo(90, 300);
+            await btn_front_4.RotateYTo(0, 300);
+
+            //await Task.Delay(500);
+
+            await btn_front_1.RotateYTo(90, 300);
+            await btn_back_1.RotateYTo(0, 300);
+
+            await btn_front_2.RotateYTo(90, 300);
+            await btn_back_2.RotateYTo(0, 300);
+
+            await btn_front_3.RotateYTo(90, 300);
+            await btn_back_3.RotateYTo(0, 300);
+
+            await btn_front_4.RotateYTo(90, 300);
+            await btn_back_4.RotateYTo(0, 300);
+
+            show_cards.IsEnabled = false;
         }
     }
 }
