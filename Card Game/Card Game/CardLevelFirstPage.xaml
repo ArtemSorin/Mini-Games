@@ -17,13 +17,13 @@
                     <RowDefinition Height="250" />
                     <RowDefinition Height="250" />
                 </Grid.RowDefinitions>
-                <ImageButton x:Name="btn_front_1" Source="Jgray.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_1" Source="jack_of_clubs.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_1" Source="cardback.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_2" Source="Ared.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_2" Source="ace_of_diamonds.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_2" Source="cardback.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_3" Source="Ared.png" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_3" Source="ace_of_diamonds.png" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
                 <ImageButton x:Name="btn_back_3" Source="cardback.png" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_front_4" Source="Jgray.png" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_4" Source="jack_of_clubs.png" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
                 <ImageButton x:Name="btn_back_4" Source="cardback.png" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
             </Grid>
             <Frame>
