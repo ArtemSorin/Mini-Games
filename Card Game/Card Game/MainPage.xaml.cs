@@ -13,7 +13,7 @@ namespace Card_Game
         public MainPage()
         {
             InitializeComponent();
-            button.Clicked += (sender, e) => Navigation.PushAsync(new CardLevelFirstPage());
+            button_game.Clicked += (sender, e) => Navigation.PushAsync(new GamesPage());
         }
     }
 }

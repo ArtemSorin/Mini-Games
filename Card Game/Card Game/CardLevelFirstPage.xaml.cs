@@ -80,6 +80,9 @@ namespace Card_Game
                     await btn_front.RotateYTo(90, 300);
                     await btn_back.RotateYTo(0, 300);
 
+                    count_correct[number] = false;
+                    count_nonselected[number] = true;
+
                     sorce -= 5;
                 }
             }

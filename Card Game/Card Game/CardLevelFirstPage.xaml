@@ -1,17 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Card_Game.CardLevelFirstPage">
+             x:Class="Card_Game.CardLevelFirstPage"
+             >
     <ScrollView>
         <StackLayout BackgroundColor="White" HorizontalOptions="Center">
             <Grid Margin="7, 20, 7, 0" HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="170" />
                     <ColumnDefinition Width="170" />
-                    <ColumnDefinition Width="170" />
-                    <ColumnDefinition Width="170" />
-                    <ColumnDefinition Width="140" />
-                    <ColumnDefinition Width="140" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="250" />
