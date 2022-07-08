@@ -28,18 +28,13 @@ namespace Card_Game
 
             Sorcepanel.Text = $"Рекорд: {sorce} / 20";
 
-            ImageButton[] mas_buttons_card_back = new ImageButton[]
+            ImageButton[] mas_buttons_card = new ImageButton[]
             {
-                btn_back_1, btn_back_2, btn_back_3, btn_back_4
-            };
-
-            ImageButton[] mas_buttons_card_front = new ImageButton[]
-            {
-                btn_front_1, btn_front_2, btn_front_3, btn_front_4
+                btn_back_1, btn_front_1, btn_back_2, btn_front_2, btn_back_3, btn_front_3, btn_back_4, btn_front_4
             };
 
             change_level.Clicked += (sender, e) => { Navigation.PushAsync(new CardLevelSecondPage()); };
-            show_cards.Clicked += (sender, e) => { function_show_cards(); };
+            show_cards.Clicked += (sender, e) => { function_show_cards(mas_buttons_card); };
 
             btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, count_nonselected, count_correct, btn_back_1, btn_front_1); };
             btn_front_1.Clicked += (sender, e) => { player.Play(); function_front_to_back(0, count_nonselected, count_correct, btn_front_1, btn_back_1); };
@@ -69,24 +64,10 @@ namespace Card_Game
 
             if (count > 1)
             {
-                if (count_correct[0] && count_correct[3])
-                {
-                    btn_front_1.IsEnabled = false;
-                    btn_front_4.IsEnabled = false;
+                if (count_correct[0] && count_correct[3]) { function_correct(btn_front_1, btn_front_4, count_correct, 0, 3); sorce += 10; }
 
-                    count_correct[0] = false;
-                    count_correct[3] = false;
-                    sorce += 10;
-                }
-                else if (count_correct[1] && count_correct[2])
-                {
-                    btn_front_2.IsEnabled = false;
-                    btn_front_3.IsEnabled = false;
+                else if (count_correct[1] && count_correct[2]) { function_correct(btn_front_2, btn_front_3, count_correct, 1, 2); sorce += 10; }
 
-                    count_correct[1] = false;
-                    count_correct[2] = false;
-                    sorce += 10;
-                }
                 else
                 {
                     await btn_front.RotateYTo(90, 150);
@@ -99,13 +80,14 @@ namespace Card_Game
                 }
             }
 
+            Sorcepanel.Text = $"Рекорд: {sorce} / 20";
+
             if (sorce == 20)
             {
                 await DisplayAlert("", "Уровень пройден!", "ок");
                 change_level.IsEnabled = true;
             }
 
-            Sorcepanel.Text = $"Рекорд: {sorce} / 20";
         }
         private async void function_front_to_back(int number, bool[] count_nonselected, bool[] count_correct, ImageButton btn_front, ImageButton btn_back)
         {
@@ -116,32 +98,29 @@ namespace Card_Game
 
             Sorcepanel.Text = $"Рекорд: {sorce} / 20";
         }
-        private async void function_show_cards()
+        private void function_correct(ImageButton btn1, ImageButton btn2, bool[] count_correct, int index1, int index2)
         {
-            await btn_back_1.RotateYTo(90, 150);
-            await btn_front_1.RotateYTo(0, 150);
+            btn1.IsEnabled = false;
+            btn2.IsEnabled = false;
 
-            await btn_back_2.RotateYTo(90, 150);
-            await btn_front_2.RotateYTo(0, 150);
+            count_correct[index1] = false;
+            count_correct[index2] = false;
+        }
+        private async void function_show_cards(ImageButton[] mas_buttons_card)
+        {
+            for (int i = 0; i < mas_buttons_card.Length; i+=2)
+            {
+                await mas_buttons_card[i].RotateYTo(90, 150);
+                await mas_buttons_card[i + 1].RotateYTo(0, 150);
+            }
 
-            await btn_back_3.RotateYTo(90, 150);
-            await btn_front_3.RotateYTo(0, 150);
+            await Task.Delay(1000);
 
-            await btn_back_4.RotateYTo(90, 150);
-            await btn_front_4.RotateYTo(0, 150);
-
-
-            await btn_front_1.RotateYTo(90, 150);
-            await btn_back_1.RotateYTo(0, 150);
-
-            await btn_front_2.RotateYTo(90, 150);
-            await btn_back_2.RotateYTo(0, 150);
-
-            await btn_front_3.RotateYTo(90, 150);
-            await btn_back_3.RotateYTo(0, 150);
-
-            await btn_front_4.RotateYTo(90, 150);
-            await btn_back_4.RotateYTo(0, 150);
+            for (int i = 1; i < mas_buttons_card.Length; i+=2)
+            {
+                await mas_buttons_card[i].RotateYTo(90, 150);
+                await mas_buttons_card[i - 1].RotateYTo(0, 150);
+            }
 
             show_cards.IsEnabled = false;
         }
