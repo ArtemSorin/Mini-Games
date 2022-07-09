@@ -11,6 +11,9 @@
                     <StackLayout>
                         <Label Text="Аккаунт:" Margin="150, 40, 0, 0" TextColor="White" FontAttributes="Bold"></Label>
                         <Label x:Name="MyUserName" Margin="150, 0, 0, 0" TextColor="White"></Label>
+                        <Label Text="Текущий прогресс:" Margin="150, 0, 50, 0" TextColor="White" FontAttributes="Bold"></Label>
+                        <ProgressBar Margin="150, 0, 50, 0" ProgressColor="White" Progress="0.5"></ProgressBar>
+                        <Button Margin="150, 0, 50, 0" CornerRadius="20" Clicked="Logout_Clicked" BackgroundColor="White" HeightRequest="40" Text="Выйти"></Button>
                     </StackLayout>
                 </Frame>
                 <Grid Padding="20,50,20,0" HorizontalOptions="Center" RowSpacing="20" VerticalOptions="FillAndExpand">
