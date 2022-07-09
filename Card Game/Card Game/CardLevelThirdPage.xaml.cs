@@ -39,37 +39,22 @@ namespace Card_Game
             show_cards.Clicked += (sender, e) => { function_show_cards(mas_buttons_card); };
 
             btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, count_nonselected, count_correct, btn_back_1, btn_front_1); };
-            btn_front_1.Clicked += (sender, e) => { player.Play(); function_front_to_back(0, count_nonselected, count_correct, btn_front_1, btn_back_1); };
             btn_back_2.Clicked += (sender, e) => { player.Play(); function_back_to_front(1, count_nonselected, count_correct, btn_back_2, btn_front_2); };
-            btn_front_2.Clicked += (sender, e) => { player.Play(); function_front_to_back(1, count_nonselected, count_correct, btn_front_2, btn_back_2); };
             btn_back_3.Clicked += (sender, e) => { player.Play(); function_back_to_front(2, count_nonselected, count_correct, btn_back_3, btn_front_3); };
-            btn_front_3.Clicked += (sender, e) => { player.Play(); function_front_to_back(2, count_nonselected, count_correct, btn_front_3, btn_back_3); };
             btn_back_4.Clicked += (sender, e) => { player.Play(); function_back_to_front(3, count_nonselected, count_correct, btn_back_4, btn_front_4); };
-            btn_front_4.Clicked += (sender, e) => { player.Play(); function_front_to_back(3, count_nonselected, count_correct, btn_front_4, btn_back_4); };
             btn_back_5.Clicked += (sender, e) => { player.Play(); function_back_to_front(4, count_nonselected, count_correct, btn_back_5, btn_front_5); };
-            btn_front_5.Clicked += (sender, e) => { player.Play(); function_front_to_back(4, count_nonselected, count_correct, btn_front_5, btn_back_5); };
             btn_back_6.Clicked += (sender, e) => { player.Play(); function_back_to_front(5, count_nonselected, count_correct, btn_back_6, btn_front_6); };
-            btn_front_6.Clicked += (sender, e) => { player.Play(); function_front_to_back(5, count_nonselected, count_correct, btn_front_6, btn_back_6); };
             btn_back_7.Clicked += (sender, e) => { player.Play(); function_back_to_front(6, count_nonselected, count_correct, btn_back_7, btn_front_7); };
-            btn_front_7.Clicked += (sender, e) => { player.Play(); function_front_to_back(6, count_nonselected, count_correct, btn_front_7, btn_back_7); };
             btn_back_8.Clicked += (sender, e) => { player.Play(); function_back_to_front(7, count_nonselected, count_correct, btn_back_8, btn_front_8); };
-            btn_front_8.Clicked += (sender, e) => { player.Play(); function_front_to_back(7, count_nonselected, count_correct, btn_front_8, btn_back_8); };
             btn_back_9.Clicked += (sender, e) => { player.Play(); function_back_to_front(8, count_nonselected, count_correct, btn_back_9, btn_front_9); };
-            btn_front_9.Clicked += (sender, e) => { player.Play(); function_front_to_back(8, count_nonselected, count_correct, btn_front_9, btn_back_9); };
             btn_back_10.Clicked += (sender, e) => { player.Play(); function_back_to_front(9, count_nonselected, count_correct, btn_back_10, btn_front_10); };
-            btn_front_10.Clicked += (sender, e) => { player.Play(); function_front_to_back(9, count_nonselected, count_correct, btn_front_10, btn_back_10); };
             btn_back_11.Clicked += (sender, e) => { player.Play(); function_back_to_front(10, count_nonselected, count_correct, btn_back_11, btn_front_11); };
-            btn_front_11.Clicked += (sender, e) => { player.Play(); function_front_to_back(10, count_nonselected, count_correct, btn_front_11, btn_back_11); };
             btn_back_12.Clicked += (sender, e) => { player.Play(); function_back_to_front(11, count_nonselected, count_correct, btn_back_12, btn_front_12); };
-            btn_front_12.Clicked += (sender, e) => { player.Play(); function_front_to_back(11, count_nonselected, count_correct, btn_front_12, btn_back_12); };
             btn_back_13.Clicked += (sender, e) => { player.Play(); function_back_to_front(12, count_nonselected, count_correct, btn_back_13, btn_front_13); };
-            btn_front_13.Clicked += (sender, e) => { player.Play(); function_front_to_back(12, count_nonselected, count_correct, btn_front_13, btn_back_13); };
             btn_back_14.Clicked += (sender, e) => { player.Play(); function_back_to_front(13, count_nonselected, count_correct, btn_back_14, btn_front_14); };
-            btn_front_14.Clicked += (sender, e) => { player.Play(); function_front_to_back(13, count_nonselected, count_correct, btn_front_14, btn_back_14); };
             btn_back_15.Clicked += (sender, e) => { player.Play(); function_back_to_front(14, count_nonselected, count_correct, btn_back_15, btn_front_15); };
-            btn_front_15.Clicked += (sender, e) => { player.Play(); function_front_to_back(14, count_nonselected, count_correct, btn_front_15, btn_back_15); };
             btn_back_16.Clicked += (sender, e) => { player.Play(); function_back_to_front(15, count_nonselected, count_correct, btn_back_16, btn_front_16); };
-            btn_front_16.Clicked += (sender, e) => { player.Play(); function_front_to_back(15, count_nonselected, count_correct, btn_front_16, btn_back_16); };
+           
         }
         private async void function_back_to_front(int number, bool[] count_nonselected, bool[] count_correct, ImageButton btn_back, ImageButton btn_front)
         {
