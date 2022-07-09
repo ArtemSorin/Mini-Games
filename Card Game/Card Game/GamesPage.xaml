@@ -6,36 +6,32 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <ScrollView>
-            <Grid BackgroundColor="#1C375C" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <StackLayout Grid.Row="0" HorizontalOptions="Center">
-                    <Label x:Name="MyUserName" TextColor="White"></Label>
-                </StackLayout>
-                <Frame Grid.Row="1" Margin="0,0,0,-40" BorderColor="#1C375C" CornerRadius="50" HasShadow="True" HeightRequest="700">
-                    <Grid Padding="20,50,20,0" HorizontalOptions="FillAndExpand" RowSpacing="20" VerticalOptions="FillAndExpand">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="20">
-                            <ImageButton x:Name="card_game" WidthRequest="130" HeightRequest="130" CornerRadius="20" Source="card_game.png"></ImageButton>
-                            <ImageButton x:Name="country_game" WidthRequest="130" HeightRequest="130" CornerRadius="20" Source="country_game.png"></ImageButton>
-                        </StackLayout>
-                        <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="20">
-                        </StackLayout>
-                    </Grid>
+            <StackLayout>
+                <Frame BackgroundColor="#1C375C" CornerRadius="40" Margin="0, -40, -30, 0" HeightRequest="200">
+                    <StackLayout>
+                        <Label Text="Аккаунт:" Margin="150, 40, 0, 0" TextColor="White" FontAttributes="Bold"></Label>
+                        <Label x:Name="MyUserName" Margin="150, 0, 0, 0" TextColor="White"></Label>
+                    </StackLayout>
                 </Frame>
-            </Grid>
+                <Grid Padding="20,50,20,0" HorizontalOptions="Center" RowSpacing="20" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="20">
+                        <Frame HeightRequest="120" WidthRequest="120" CornerRadius="20">
+                            <ImageButton x:Name="card_game" CornerRadius="50" Margin="-20" Source="card_game.png"></ImageButton>
+                        </Frame>
+                        <Frame HeightRequest="120" WidthRequest="120" CornerRadius="20">
+                            <ImageButton x:Name="country_game" CornerRadius="50" Margin="-20" Source="country_game.png"></ImageButton>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="20">
+                        <Frame HeightRequest="120" WidthRequest="120" CornerRadius="20"></Frame>
+                        <Frame HeightRequest="120" WidthRequest="120" CornerRadius="20"></Frame>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

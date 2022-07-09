@@ -64,8 +64,8 @@ namespace Card_Game
         {
             questImage.Source = "answerCheck.png";
             button1.Text = $"верно {countExcelentQuestionAnswers} из {allCount}";
-            button2.Text = "пройти заново";
-            button3.Text = "выход";
+            button2.IsVisible = false;
+            button3.IsVisible = false;
 
             if (buttonP == 2)
             {
