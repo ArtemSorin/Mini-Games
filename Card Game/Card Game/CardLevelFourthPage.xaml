@@ -12,10 +12,10 @@
         <StackLayout Padding="20" HeightRequest="240" BackgroundColor="White" HorizontalOptions="Center">
             <Grid HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="65" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
