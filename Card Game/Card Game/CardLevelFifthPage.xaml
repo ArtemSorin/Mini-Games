@@ -9,21 +9,21 @@
         </StackLayout>
     </NavigationPage.TitleView>
     <ScrollView>
-        <StackLayout>
-            <Grid Margin="7, 20, 7, 0" HorizontalOptions="Center">
+        <StackLayout Padding="20" HeightRequest="240" BackgroundColor="White" HorizontalOptions="Center">
+            <Grid HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="65" />
-                    <ColumnDefinition Width="65" />
-                    <ColumnDefinition Width="65" />
-                    <ColumnDefinition Width="65" />
-                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="95" />
-                    <RowDefinition Height="95" />
-                    <RowDefinition Height="95" />
-                    <RowDefinition Height="95" />
-                    <RowDefinition Height="95" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <ImageButton x:Name="btn_front_1" Source="eight_of_hearts.png" CornerRadius="15" Grid.Column="0" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_1" Source="cardback.png" CornerRadius="15" Grid.Column="0" Grid.Row="0"></ImageButton>

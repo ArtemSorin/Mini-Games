@@ -78,7 +78,7 @@ namespace Card_Game
 
             Sorcepanel.Text = $"Рекорд: {sorce} / 20";
 
-            //if (sorce == 20)
+            if (sorce == 20)
             {
                 await DisplayAlert("", "Уровень пройден!", "ок");
                 change_level.IsEnabled = true;
