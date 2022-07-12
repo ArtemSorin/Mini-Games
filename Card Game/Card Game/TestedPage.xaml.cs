@@ -10,37 +10,33 @@ using Xamarin.Forms.Xaml;
 namespace Card_Game
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CardLevelFirstPage : ContentPage
+    public partial class TestedPage : ContentPage
     {
         int sorce = 0;
-        const int cards_count = 4;
         struct cards
         {
             public string image_front;
             public int card_number;
         }
-        public CardLevelFirstPage()
+        public TestedPage()
         {
             InitializeComponent();
 
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("card.mp3");
 
-            bool[] count_correct = new bool[cards_count];
-            bool[] count_nonselected = new bool[cards_count];
+            bool[] count_correct = new bool[4];
+            bool[] count_nonselected = new bool[4];
 
-            for (int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; }
-            for (int i = 0; i < count_nonselected.Length; i++) { count_nonselected[i] = true; }
-
-            Sorcepanel.Text = $"Рекорд: {sorce} / {count_correct.Length * 10 / 2}";
+            for (int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; count_nonselected[i] = true; }
 
             ImageButton[] mas_buttons_card = new ImageButton[]
             {
                 btn_front_1, btn_front_2, btn_front_3, btn_front_4, btn_back_1, btn_back_2, btn_back_3, btn_back_4
             };
 
-            cards[] mas = new cards[cards_count];
-            int[] mas_numbers = new int[cards_count];
+            cards[] mas = new cards[4];
+            int[] mas_numbers = new int[4];
 
             mas[0].image_front = "jack_of_clubs.png"; mas[0].card_number = 0;
             mas[1].image_front = "jack_of_clubs.png"; mas[1].card_number = 0;
@@ -48,7 +44,7 @@ namespace Card_Game
             mas[3].image_front = "ace_of_diamonds.png"; mas[3].card_number = 1;
 
             var random = new Random();
-            var numbers = Enumerable.Range(0, cards_count).OrderBy(n => random.Next()).ToArray();
+            var numbers = Enumerable.Range(0, 4).OrderBy(n => random.Next()).ToArray();
 
             for (int i = 0; i < mas_buttons_card.Length / 2; i++)
             {
@@ -58,9 +54,9 @@ namespace Card_Game
 
             var List = new List<KeyValuePair<int, int>>();
 
-            for (int i = 0; i < mas_numbers.Length; i++)
+            for (int i = 0; i < mas_buttons_card.Length / 2; i++)
             {
-                for (int j = i + 1; j < mas_numbers.Length; j++)
+                for (int j = i + 1; j < mas_buttons_card.Length / 2; j++)
                 {
                     if (mas_numbers[i] == mas_numbers[j])
                     {
@@ -69,7 +65,8 @@ namespace Card_Game
                 }
             }
 
-            change_level.Clicked += (sender, e) => { Navigation.PushAsync(new CardLevelSecondPage()); };
+            Sorcepanel.Text = $"Рекорд: {sorce}/ 20";
+
             show_cards.Clicked += (sender, e) => { function_show_cards(mas_buttons_card); };
 
             btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, count_nonselected, count_correct, btn_back_1, btn_front_1, mas_buttons_card, List); };
@@ -89,30 +86,18 @@ namespace Card_Game
 
             for (int i = 0; i < count_correct.Length; i++) { if (count_correct[i]) { count++; } }
 
-            if (count > 1)
+            if(count > 1)
             {
-                bool flag_find_correct = false;
+                if (count_correct[mas[0].Key] && count_correct[mas[0].Value]) { function_correct(btn_front_1, btn_front_4, count_correct, mas[0].Key, mas[0].Value); sorce += 10; }
 
-                for (int i = 0; i < count_correct.Length / 2; i++)
-                {
-                    if (count_correct[mas[i].Key] && count_correct[mas[i].Value])
-                    {
-                        function_correct(mas_buttons_card[mas[i].Key], mas_buttons_card[mas[i].Value], count_correct, mas[i].Key, mas[i].Value);
-                        sorce += 10;
-                        flag_find_correct = true;
-                    }
-                }
+                else if (count_correct[mas[1].Key] && count_correct[mas[1].Value]) { function_correct(btn_front_2, btn_front_3, count_correct, mas[1].Key, mas[1].Key); sorce += 10; }
 
-                if (!flag_find_correct)
-                {
-                    function_non_correct(number, btn_front, btn_back, count_correct, count_nonselected);
-                    sorce -= 5;
-                }
+                else { function_non_correct(number, btn_front, btn_back, count_correct, count_nonselected); sorce -= 5; }
             }
 
-            Sorcepanel.Text = $"Рекорд: {sorce} / {count_correct.Length * 10 / 2}";
+            Sorcepanel.Text = $"Рекорд: {sorce} / 20";
 
-            if (sorce == count_correct.Length * 10 / 2)
+            if (sorce == 20)
             {
                 await DisplayAlert("", "Уровень пройден!", "ок");
                 change_level.IsEnabled = true;

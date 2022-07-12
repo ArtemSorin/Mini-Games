@@ -24,45 +24,45 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <ImageButton x:Name="btn_front_1" Source="eight_of_hearts.png" CornerRadius="15" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_1" CornerRadius="15" Grid.Column="0" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_1" Source="cardback.png" CornerRadius="15" Grid.Column="0" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_2" Source="nine_of_clubs.png" CornerRadius="15" Grid.Column="1" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_2" CornerRadius="15" Grid.Column="1" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_2" Source="cardback.png" CornerRadius="15" Grid.Column="1" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_3" Source="queen_of_diamonds.png" CornerRadius="15" Grid.Column="2" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_3" CornerRadius="15" Grid.Column="2" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_3" Source="cardback.png" CornerRadius="15" Grid.Column="2" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_4" Source="three_of_clubs.png" CornerRadius="15" Grid.Column="3" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_4" CornerRadius="15" Grid.Column="3" Grid.Row="0"></ImageButton>
                 <ImageButton x:Name="btn_back_4" Source="cardback.png" CornerRadius="15" Grid.Column="3" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_5" Source="ace_of_spades.png" CornerRadius="15" Grid.Column="0" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_5" CornerRadius="15" Grid.Column="0" Grid.Row="1"></ImageButton>
                 <ImageButton x:Name="btn_back_5" Source="cardback.png" CornerRadius="15" Grid.Column="0" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_front_6" Source="five_of_clubs.png" CornerRadius="15" Grid.Column="1" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_6" CornerRadius="15" Grid.Column="1" Grid.Row="1"></ImageButton>
                 <ImageButton x:Name="btn_back_6" Source="cardback.png" CornerRadius="15" Grid.Column="1" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_front_7" Source="two_of_clubs.png" CornerRadius="15" Grid.Column="2" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_7" CornerRadius="15" Grid.Column="2" Grid.Row="1"></ImageButton>
                 <ImageButton x:Name="btn_back_7" Source="cardback.png" CornerRadius="15" Grid.Column="2" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_front_8" Source="ten_of_diamonds.png" CornerRadius="15" Grid.Column="3" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_8" CornerRadius="15" Grid.Column="3" Grid.Row="1"></ImageButton>
                 <ImageButton x:Name="btn_back_8" Source="cardback.png" CornerRadius="15" Grid.Column="3" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_front_9" Source="eight_of_spades.png" CornerRadius="15" Grid.Column="0" Grid.Row="2"></ImageButton>
+                <ImageButton x:Name="btn_front_9" CornerRadius="15" Grid.Column="0" Grid.Row="2"></ImageButton>
                 <ImageButton x:Name="btn_back_9" Source="cardback.png" CornerRadius="15" Grid.Column="0" Grid.Row="2"></ImageButton>
-                <ImageButton x:Name="btn_front_10" Source="queen_of_diamonds.png" CornerRadius="15" Grid.Column="1" Grid.Row="2"></ImageButton>
+                <ImageButton x:Name="btn_front_10" CornerRadius="15" Grid.Column="1" Grid.Row="2"></ImageButton>
                 <ImageButton x:Name="btn_back_10" Source="cardback.png" CornerRadius="15" Grid.Column="1" Grid.Row="2"></ImageButton>
-                <ImageButton x:Name="btn_front_11" Source="eight_of_hearts.png" CornerRadius="15" Grid.Column="2" Grid.Row="2"></ImageButton>
+                <ImageButton x:Name="btn_front_11" CornerRadius="15" Grid.Column="2" Grid.Row="2"></ImageButton>
                 <ImageButton x:Name="btn_back_11" Source="cardback.png" CornerRadius="15" Grid.Column="2" Grid.Row="2"></ImageButton>
-                <ImageButton x:Name="btn_front_12" Source="three_of_clubs.png" CornerRadius="15" Grid.Column="3" Grid.Row="2"></ImageButton>
+                <ImageButton x:Name="btn_front_12" CornerRadius="15" Grid.Column="3" Grid.Row="2"></ImageButton>
                 <ImageButton x:Name="btn_back_12" Source="cardback.png" CornerRadius="15" Grid.Column="3" Grid.Row="2"></ImageButton>
                 <ImageButton x:Name="btn_front_13" Source="nine_of_clubs.png" CornerRadius="15" Grid.Column="0" Grid.Row="3"></ImageButton>
                 <ImageButton x:Name="btn_back_13" Source="cardback.png" CornerRadius="15" Grid.Column="0" Grid.Row="3"></ImageButton>
-                <ImageButton x:Name="btn_front_14" Source="five_of_clubs.png" CornerRadius="15" Grid.Column="1" Grid.Row="3"></ImageButton>
+                <ImageButton x:Name="btn_front_14" CornerRadius="15" Grid.Column="1" Grid.Row="3"></ImageButton>
                 <ImageButton x:Name="btn_back_14" Source="cardback.png" CornerRadius="15" Grid.Column="1" Grid.Row="3"></ImageButton>
-                <ImageButton x:Name="btn_front_15" Source="ten_of_diamonds.png" CornerRadius="15" Grid.Column="2" Grid.Row="3"></ImageButton>
+                <ImageButton x:Name="btn_front_15" CornerRadius="15" Grid.Column="2" Grid.Row="3"></ImageButton>
                 <ImageButton x:Name="btn_back_15" Source="cardback.png" CornerRadius="15" Grid.Column="2" Grid.Row="3"></ImageButton>
-                <ImageButton x:Name="btn_front_16" Source="eight_of_spades.png" CornerRadius="15" Grid.Column="3" Grid.Row="3"></ImageButton>
+                <ImageButton x:Name="btn_front_16" CornerRadius="15" Grid.Column="3" Grid.Row="3"></ImageButton>
                 <ImageButton x:Name="btn_back_16" Source="cardback.png" CornerRadius="15" Grid.Column="3" Grid.Row="3"></ImageButton>
-                <ImageButton x:Name="btn_front_17" Source="two_of_clubs.png" CornerRadius="15" Grid.Column="0" Grid.Row="4"></ImageButton>
+                <ImageButton x:Name="btn_front_17" CornerRadius="15" Grid.Column="0" Grid.Row="4"></ImageButton>
                 <ImageButton x:Name="btn_back_17" Source="cardback.png" CornerRadius="15" Grid.Column="0" Grid.Row="4"></ImageButton>
                 <ImageButton x:Name="btn_front_18" Source="ten_of_hearts.png" CornerRadius="15" Grid.Column="1" Grid.Row="4"></ImageButton>
                 <ImageButton x:Name="btn_back_18" Source="cardback.png" CornerRadius="15" Grid.Column="1" Grid.Row="4"></ImageButton>
-                <ImageButton x:Name="btn_front_19" Source="ten_of_hearts.png" CornerRadius="15" Grid.Column="2" Grid.Row="4"></ImageButton>
+                <ImageButton x:Name="btn_front_19" CornerRadius="15" Grid.Column="2" Grid.Row="4"></ImageButton>
                 <ImageButton x:Name="btn_back_19" Source="cardback.png" CornerRadius="15" Grid.Column="2" Grid.Row="4"></ImageButton>
-                <ImageButton x:Name="btn_front_20" Source="ace_of_spades.png" CornerRadius="15" Grid.Column="3" Grid.Row="4"></ImageButton>
+                <ImageButton x:Name="btn_front_20" CornerRadius="15" Grid.Column="3" Grid.Row="4"></ImageButton>
                 <ImageButton x:Name="btn_back_20" Source="cardback.png" CornerRadius="15" Grid.Column="3" Grid.Row="4"></ImageButton>
             </Grid>
             <Frame>

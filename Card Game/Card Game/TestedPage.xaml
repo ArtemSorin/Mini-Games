@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Card_Game.CardLevelFirstPage">
+             x:Class="Card_Game.TestedPage">
     <NavigationPage.TitleView>
         <StackLayout>
             <Label Text="Уровень 1" HorizontalTextAlignment="Center" Margin="0, 0, 75, 0"
