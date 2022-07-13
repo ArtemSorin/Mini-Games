@@ -110,85 +110,46 @@
     <AndroidAsset Include="Assets\card.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ace_of_diamonds.png" />
+    <AndroidResource Include="Resources\drawable\card_mask.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\jack_of_clubs.png" />
+    <AndroidResource Include="Resources\drawable\card_champagne.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cardback.png" />
+    <AndroidResource Include="Resources\drawable\card_champagne_three.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\whiteboard.png" />
+    <AndroidResource Include="Resources\drawable\card_cheese.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\king_of_spades.png" />
+    <AndroidResource Include="Resources\drawable\card_flashlight.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ten_of_hearts.png" />
+    <AndroidResource Include="Resources\drawable\game_countrys.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ten_of_diamonds.png" />
+    <AndroidResource Include="Resources\drawable\game_cards.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ace_of_spades.png" />
+    <AndroidResource Include="Resources\drawable\background_of_card.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\three_of_diamonds.png" />
+    <AndroidResource Include="Resources\drawable\card_santa_hat_two.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\eight_of_spades.png" />
+    <AndroidResource Include="Resources\drawable\card_crown_three.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\five_of_clubs.png" />
+    <AndroidResource Include="Resources\drawable\card_feather_two.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\card_game.png" />
+    <AndroidResource Include="Resources\drawable\card_pen.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\bomb_card.png" />
+    <AndroidResource Include="Resources\drawable\card_pie.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nine_of_clubs.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\two_of_clubs.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\sweden.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\japan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\germany.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\france.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\usa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\britain.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\main_symbol.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\four_of_hearts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\eight_of_hearts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\three_of_clubs.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\queen_of_diamonds.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\country_game.png" />
+    <AndroidResource Include="Resources\drawable\card_santa_hat.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

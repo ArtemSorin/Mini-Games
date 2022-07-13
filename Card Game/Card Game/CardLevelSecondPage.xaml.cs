@@ -43,12 +43,12 @@ namespace Card_Game
             cards[] mas = new cards[cards_count];
             int[] mas_numbers = new int[cards_count];
 
-            mas[0].image_front = "ace_of_spades.png"; mas[0].card_number = 0;
-            mas[1].image_front = "ace_of_spades.png"; mas[1].card_number = 0;
-            mas[2].image_front = "three_of_diamonds.png"; mas[2].card_number = 1;
-            mas[3].image_front = "three_of_diamonds.png"; mas[3].card_number = 1;
-            mas[4].image_front = "ace_of_diamonds.png"; mas[4].card_number = 2;
-            mas[5].image_front = "ace_of_diamonds.png"; mas[5].card_number = 2;
+            mas[0].image_front = "card_champagne.png"; mas[0].card_number = 0;
+            mas[1].image_front = "card_champagne.png"; mas[1].card_number = 0;
+            mas[2].image_front = "card_champagne_three.png"; mas[2].card_number = 1;
+            mas[3].image_front = "card_champagne_three.png"; mas[3].card_number = 1;
+            mas[4].image_front = "card_mask.png"; mas[4].card_number = 2;
+            mas[5].image_front = "card_mask.png"; mas[5].card_number = 2;
 
             var random = new Random();
             var numbers = Enumerable.Range(0, cards_count).OrderBy(n => random.Next()).ToArray();

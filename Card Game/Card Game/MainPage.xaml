@@ -39,8 +39,8 @@
                             <Image Aspect="AspectFit" HeightRequest="30" Source="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-icon-png-transparent-background-osteopathy-16.png" WidthRequest="30" />
                             <Image Aspect="AspectFit" HeightRequest="30" Source="https://cdn-icons-png.flaticon.com/512/174/174857.png" WidthRequest="30" />
                         </StackLayout>
-                        <Label Grid.Row="8" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Text="Forget Password" />
-                        <Label Grid.Row="9" Margin="0,-10,0,0" HorizontalOptions="CenterAndExpand" Text="Don't have an account? Sign up here" />
+                        <Label Grid.Row="8" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" Text="Забыл пароль" />
+                        <Label Grid.Row="9" Margin="0,-10,0,0" HorizontalOptions="CenterAndExpand" Text="Нет аккаунта? Зарегистрируйся здесь!" />
                     </Grid>
                 </Frame>
             </Grid>
