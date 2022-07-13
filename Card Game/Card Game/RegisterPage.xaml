@@ -15,10 +15,10 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" FontAttributes="Bold" FontSize="24" HorizontalOptions="CenterAndExpand" Text="Регистрация" TextColor="#1C375C" />
-        <Label Grid.Row="1" Margin="0,-15,0,0" HorizontalOptions="CenterAndExpand" Text="Именем пользователя будет email адрес" TextColor="#1C375C" />
+        <Label Grid.Row="0" FontAttributes="Bold" FontSize="24" HorizontalOptions="CenterAndExpand" Text="Регистрация" TextColor="DimGray" />
+        <Label Grid.Row="1" Margin="0,-15,0,0" HorizontalOptions="CenterAndExpand" Text="Именем пользователя будет email адрес" TextColor="#7749D9" />
         <Entry x:Name="UserNewEmail" Grid.Row="2" Margin="0,20,0,0" HorizontalOptions="FillAndExpand" Placeholder="Email" Text="{Binding Email}" VerticalOptions="FillAndExpand" />
         <Entry x:Name="UserNewPassword" Grid.Row="3" HorizontalOptions="FillAndExpand" IsPassword="True" Placeholder="Password" Text="{Binding Password}" VerticalOptions="FillAndExpand" />
-        <Button Grid.Row="4" BackgroundColor="#1C375C" TextColor="White" Clicked="signupbutton_Clicked" CornerRadius="20" Text="Зарегистрироваться" />
+        <Button x:Name="btn_register" Grid.Row="4" TextColor="White" Clicked="signupbutton_Clicked" CornerRadius="20" Text="Зарегистрироваться" />
     </Grid>
 </ContentPage>

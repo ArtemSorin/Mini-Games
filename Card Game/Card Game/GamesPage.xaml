@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Frame BackgroundColor="#1C375C" CornerRadius="40" Margin="0, -40, -30, 0" HeightRequest="200">
+                <Frame BackgroundColor="#7749D9" CornerRadius="40" Margin="0, -40, -30, 0" HeightRequest="200">
                     <StackLayout>
                         <Label Text="Аккаунт:" Margin="150, 40, 0, 0" TextColor="White" FontAttributes="Bold"></Label>
                         <Label x:Name="MyUserName" Margin="150, 0, 0, 0" TextColor="White"></Label>

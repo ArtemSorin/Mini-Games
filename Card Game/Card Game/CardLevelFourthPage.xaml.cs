@@ -26,6 +26,17 @@ namespace Card_Game
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("card.mp3");
 
+            RadialGradientBrush radialGradientBrush = new RadialGradientBrush();
+            radialGradientBrush.Radius = 1.5;
+            radialGradientBrush.GradientStops = new GradientStopCollection()
+            {
+                new GradientStop(){ Color = Color.FromHex("#7749D9"), Offset = 0 },
+                new GradientStop(){ Color = Color.FromHex("#B16EF5"), Offset = 1 }
+            };
+
+            change_level.Background = radialGradientBrush;
+            show_cards.Background = radialGradientBrush;
+
             bool[] count_correct = new bool[cards_count];
             bool[] count_nonselected = new bool[cards_count];
 
@@ -46,26 +57,26 @@ namespace Card_Game
             cards[] mas = new cards[cards_count];
             int[] mas_numbers = new int[cards_count];
 
-            mas[0].image_front = "eight_of_hearts.png"; mas[0].card_number = 0;
-            mas[1].image_front = "eight_of_hearts.png"; mas[1].card_number = 0;
-            mas[2].image_front = "nine_of_clubs.png"; mas[2].card_number = 1;
-            mas[3].image_front = "nine_of_clubs.png"; mas[3].card_number = 1;
-            mas[4].image_front = "queen_of_diamonds.png"; mas[4].card_number = 2;
-            mas[5].image_front = "queen_of_diamonds.png"; mas[5].card_number = 2;
-            mas[6].image_front = "three_of_clubs.png"; mas[6].card_number = 3;
-            mas[7].image_front = "three_of_clubs.png"; mas[7].card_number = 3;
-            mas[8].image_front = "ace_of_spades.png"; mas[8].card_number = 4;
-            mas[9].image_front = "ace_of_spades.png"; mas[9].card_number = 4;
-            mas[10].image_front = "five_of_clubs.png"; mas[10].card_number = 5;
-            mas[11].image_front = "five_of_clubs.png"; mas[11].card_number = 5;
-            mas[12].image_front = "two_of_clubs.png"; mas[12].card_number = 6;
-            mas[13].image_front = "two_of_clubs.png"; mas[13].card_number = 6;
-            mas[14].image_front = "ten_of_diamonds.png"; mas[14].card_number = 7;
-            mas[15].image_front = "ten_of_diamonds.png"; mas[15].card_number = 7;
-            mas[16].image_front = "eight_of_spades.png"; mas[16].card_number = 8;
-            mas[17].image_front = "eight_of_spades.png"; mas[17].card_number = 8;
-            mas[18].image_front = "ten_of_hearts.png"; mas[18].card_number = 9;
-            mas[19].image_front = "ten_of_hearts.png"; mas[19].card_number = 9;
+            mas[0].image_front = "card_berry.png"; mas[0].card_number = 0;
+            mas[1].image_front = "card_berry.png"; mas[1].card_number = 0;
+            mas[2].image_front = "card_brush_two.png"; mas[2].card_number = 1;
+            mas[3].image_front = "card_brush_two.png"; mas[3].card_number = 1;
+            mas[4].image_front = "card_lantern.png"; mas[4].card_number = 2;
+            mas[5].image_front = "card_lantern.png"; mas[5].card_number = 2;
+            mas[6].image_front = "card_palm_three.png"; mas[6].card_number = 3;
+            mas[7].image_front = "card_palm_three.png"; mas[7].card_number = 3;
+            mas[8].image_front = "card_santa_hat_three.png"; mas[8].card_number = 4;
+            mas[9].image_front = "card_santa_hat_three.png"; mas[9].card_number = 4;
+            mas[10].image_front = "card_santa_hat.png"; mas[10].card_number = 5;
+            mas[11].image_front = "card_santa_hat.png"; mas[11].card_number = 5;
+            mas[12].image_front = "card_champagne.png"; mas[12].card_number = 6;
+            mas[13].image_front = "card_champagne.png"; mas[13].card_number = 6;
+            mas[14].image_front = "card_cheese.png"; mas[14].card_number = 7;
+            mas[15].image_front = "card_cheese.png"; mas[15].card_number = 7;
+            mas[16].image_front = "card_crown_three.png"; mas[16].card_number = 8;
+            mas[17].image_front = "card_crown_three.png"; mas[17].card_number = 8;
+            mas[18].image_front = "card_champagne_three.png"; mas[18].card_number = 9;
+            mas[19].image_front = "card_champagne_three.png"; mas[19].card_number = 9;
 
             var random = new Random();
             var numbers = Enumerable.Range(0, cards_count).OrderBy(n => random.Next()).ToArray();

@@ -17,6 +17,16 @@ namespace Card_Game
         public RegisterPage()
         {
             InitializeComponent();
+
+            RadialGradientBrush radialGradientBrush = new RadialGradientBrush();
+            radialGradientBrush.Radius = 1.5;
+            radialGradientBrush.GradientStops = new GradientStopCollection()
+            {
+                new GradientStop(){ Color = Color.FromHex("#7749D9"), Offset = 0 },
+                new GradientStop(){ Color = Color.FromHex("#B16EF5"), Offset = 1 }
+            };
+
+            btn_register.Background = radialGradientBrush;
         }
         async void signupbutton_Clicked(System.Object sender, System.EventArgs e)
         {

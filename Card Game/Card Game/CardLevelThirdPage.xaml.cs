@@ -26,6 +26,17 @@ namespace Card_Game
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("card.mp3");
 
+            RadialGradientBrush radialGradientBrush = new RadialGradientBrush();
+            radialGradientBrush.Radius = 1.5;
+            radialGradientBrush.GradientStops = new GradientStopCollection()
+            {
+                new GradientStop(){ Color = Color.FromHex("#7749D9"), Offset = 0 },
+                new GradientStop(){ Color = Color.FromHex("#B16EF5"), Offset = 1 }
+            };
+
+            change_level.Background = radialGradientBrush;
+            show_cards.Background = radialGradientBrush;
+
             bool[] count_correct = new bool[cards_count];
             bool[] count_nonselected = new bool[cards_count];
 
