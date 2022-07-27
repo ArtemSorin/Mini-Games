@@ -23,12 +23,12 @@ namespace Card_Game
         public List<question> initialQuestLite()
         {
             List<question> questions = new List<question>();
-            questions.Add(new question() { image = "sweden.png", var1 = "Швеция", var2 = "Дания", var3 = "Норвегия", answer = 1 });
-            questions.Add(new question() { image = "japan.png", var1 = "Южная Корея", var2 = "Сингапур", var3 = "Япония", answer = 3 });
-            questions.Add(new question() { image = "germany.png", var1 = "Австрия", var2 = "Германия", var3 = "Польша", answer = 2 });
-            questions.Add(new question() { image = "france.png", var1 = "Франция", var2 = "Италия", var3 = "Испания", answer = 1 });
-            questions.Add(new question() { image = "usa.png", var1 = "Канада", var2 = "США", var3 = "Малазия", answer = 2 });
-            questions.Add(new question() { image = "britain.png", var1 = "Португалия", var2 = "Ирландия", var3 = "Великобритания", answer = 3 });
+            questions.Add(new question() { image = "country_russia.png", var1 = "Россия", var2 = "Украина", var3 = "Белоруссия", answer = 1 });
+            questions.Add(new question() { image = "country_japan.png", var1 = "Южная Корея", var2 = "Сингапур", var3 = "Япония", answer = 3 });
+            questions.Add(new question() { image = "country_germany.png", var1 = "Австрия", var2 = "Германия", var3 = "Польша", answer = 2 });
+            questions.Add(new question() { image = "country_france.png", var1 = "Франция", var2 = "Италия", var3 = "Испания", answer = 1 });
+            questions.Add(new question() { image = "country_australia.png", var1 = "Канада", var2 = "Австралия", var3 = "Малазия", answer = 2 });
+            questions.Add(new question() { image = "country_britain.png", var1 = "Португалия", var2 = "Ирландия", var3 = "Великобритания", answer = 3 });
 
             return questions;
         }
@@ -64,7 +64,7 @@ namespace Card_Game
         {
             questImage.Source = "answerCheck.png";
             button1.Text = $"верно {countExcelentQuestionAnswers} из {allCount}";
-            button2.IsVisible = false;
+            button2.Clicked += (s, e) => Navigation.PushAsync(new CountryLevelSecondPage());
             button3.IsVisible = false;
 
             if (buttonP == 2)
@@ -83,6 +83,18 @@ namespace Card_Game
         public CountryLevelFirstPage()
         {
             InitializeComponent();
+
+            RadialGradientBrush radialGradientBrush = new RadialGradientBrush();
+            radialGradientBrush.Radius = 1.5;
+            radialGradientBrush.GradientStops = new GradientStopCollection()
+            {
+                new GradientStop(){ Color = Color.FromHex("#6231CC"), Offset = 0 },
+                new GradientStop(){ Color = Color.FromHex("#7A4AE0"), Offset = 1 }
+            };
+
+            button1.Background = radialGradientBrush;
+            button2.Background = radialGradientBrush;
+            button3.Background = radialGradientBrush;
 
             int countExcelentQuestionAnswers = 0;
 

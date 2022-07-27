@@ -30,8 +30,8 @@ namespace Card_Game
             radialGradientBrush.Radius = 1.5;
             radialGradientBrush.GradientStops = new GradientStopCollection()
             {
-                new GradientStop(){ Color = Color.FromHex("#7749D9"), Offset = 0 },
-                new GradientStop(){ Color = Color.FromHex("#B16EF5"), Offset = 1 }
+                new GradientStop(){ Color = Color.FromHex("#6231CC"), Offset = 0 },
+                new GradientStop(){ Color = Color.FromHex("#7A4AE0"), Offset = 1 }
             };
 
             change_level.Background = radialGradientBrush;
@@ -114,7 +114,16 @@ namespace Card_Game
             btn_back_14.Clicked += (sender, e) => { player.Play(); function_back_to_front(13, count_nonselected, count_correct, btn_back_14, btn_front_14, mas_buttons_card, List); };
             btn_back_15.Clicked += (sender, e) => { player.Play(); function_back_to_front(14, count_nonselected, count_correct, btn_back_15, btn_front_15, mas_buttons_card, List); };
             btn_back_16.Clicked += (sender, e) => { player.Play(); function_back_to_front(15, count_nonselected, count_correct, btn_back_16, btn_front_16, mas_buttons_card, List); };
-           
+
+            for (int i = mas_buttons_card.Length / 2; i < mas_buttons_card.Length; i++)
+            {
+                mas_buttons_card[i].IsEnabled = false;
+            }
+
+            for (int i = 0; i < mas_buttons_card.Length; i++)
+            {
+                mas_buttons_card[i].BackgroundColor = Color.White;
+            }
         }
         private async void function_back_to_front(int number, bool[] count_nonselected, bool[] count_correct, ImageButton btn_back, ImageButton btn_front, ImageButton[] mas_buttons_card, List<KeyValuePair<int, int>> mas)
         {
@@ -151,7 +160,7 @@ namespace Card_Game
 
             Sorcepanel.Text = $"Рекорд: {sorce} / {count_correct.Length * 10 / 2}";
 
-            if (sorce == count_correct.Length * 10 / 2)
+            if (function_is_all_open(count_nonselected) && sorce >= (count_correct.Length * 10 / 2) * 0.75)
             {
                 await DisplayAlert("", "Уровень пройден!", "ок");
                 change_level.IsEnabled = true;
@@ -165,7 +174,7 @@ namespace Card_Game
                 await mas_buttons_card[i].RotateYTo(0, 150);
             }
 
-            await Task.Delay(2000);
+            await Task.Delay(3000);
 
             for (int i = 0; i < mas_buttons_card.Length / 2; i++)
             {
@@ -174,6 +183,11 @@ namespace Card_Game
             }
 
             show_cards.IsEnabled = false;
+
+            for (int i = mas_buttons_card.Length / 2; i < mas_buttons_card.Length; i++)
+            {
+                mas_buttons_card[i].IsEnabled = true;
+            }
         }
         private void function_correct(ImageButton btn1, ImageButton btn2, bool[] count_correct, int index1, int index2)
         {
@@ -190,6 +204,17 @@ namespace Card_Game
 
             count_correct[number] = false;
             count_nonselected[number] = true;
+        }
+        private bool function_is_all_open(bool[] count_nonselected)
+        {
+            for (int i = 0; i < count_nonselected.Length; i++)
+            {
+                if (count_nonselected[i])
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

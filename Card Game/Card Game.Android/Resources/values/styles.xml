@@ -11,8 +11,11 @@
     <!--<item name="colorPrimary">#2196F3</item>-->
     <!-- colorPrimaryDark is used for the status bar -->
     <!--<item name="colorPrimaryDark">#1976D2</item>-->
-	  <item name="colorPrimaryDark">#7749D9</item>
-	  <item name="colorPrimary">#7749D9</item>
+	  <item name="android:statusBarColor">#00000000</item>
+	  <item name="android:windowTranslucentStatus">false</item>
+	  <item name="android:windowTranslucentNavigation">true</item>
+	  <item name="android:windowLightStatusBar">true</item>
+	  <item name="colorPrimary">#6231CC</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
     <!--<item name="colorAccent">#FF4081</item>-->

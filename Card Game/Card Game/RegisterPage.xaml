@@ -4,10 +4,10 @@
              x:Class="Card_Game.RegisterPage"
              NavigationPage.HasNavigationBar="False">
     <Grid
-        Padding="20,50,20,0"
+        Padding="20,0,20,0"
         HorizontalOptions="FillAndExpand"
         RowSpacing="20"
-        VerticalOptions="FillAndExpand">
+        VerticalOptions="CenterAndExpand">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />

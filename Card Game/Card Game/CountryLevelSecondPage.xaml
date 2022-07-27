@@ -2,11 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Card_Game.CountryLevelSecondPage">
-    <ContentPage.Content>
+    <NavigationPage.TitleView>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Уровень 2" HorizontalTextAlignment="Center" Margin="0, 0, 75, 0" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
         </StackLayout>
-    </ContentPage.Content>
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="White" Padding="16" CornerRadius="50" Margin="50, 10, 50, 10">
+                <Label Text="Что это за страна?" TextColor="#6231CC" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+            </Frame>
+            <Frame x:Name="questImageFrame" BackgroundColor="White" Padding="16" WidthRequest="100" HeightRequest="150" Margin="30, 0, 30, 0" CornerRadius="50">
+                <Image x:Name="questImage" Source="bitcoin1.png"></Image>
+            </Frame>
+            <Button x:Name="button1" FontSize="Large" Margin="50, 30, 50, 0" CornerRadius="50" Text="" FontAttributes="Bold" TextColor="White">
+            </Button>
+            <Button x:Name="button2" FontSize="Large" Margin="50, 30, 50, 0" CornerRadius="50" Text="" FontAttributes="Bold" TextColor="White">
+            </Button>
+            <Button x:Name="button3" FontSize="Large" Margin="50, 30, 50, 0" CornerRadius="50" Text="" FontAttributes="Bold" TextColor="White">
+            </Button>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

@@ -23,6 +23,7 @@ namespace Card_Game
 
             card_game.Clicked += (sender, e) => Navigation.PushAsync(new CardLevelFirstPage());
             country_game.Clicked += (sender, e) => Navigation.PushAsync(new CountryLevelFirstPage());
+            tictac_game.Clicked += (sender, e) => Navigation.PushAsync(new TicTacToePage());
         }
         async private void GetProfileInformationAndRefreshToken()
         {

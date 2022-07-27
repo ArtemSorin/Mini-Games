@@ -19,14 +19,14 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <ImageButton x:Name="btn_front_1" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_back_1" Source="background_of_card.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_2" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_back_2" Source="background_of_card.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
-                <ImageButton x:Name="btn_front_3" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_back_3" Source="background_of_card.png" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_front_4" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
-                <ImageButton x:Name="btn_back_4" Source="background_of_card.png" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_1" CornerRadius="30" BackgroundColor="White" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_back_1" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_2" CornerRadius="30" BackgroundColor="White" Grid.Column="1" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_back_2" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_3" CornerRadius="30" BackgroundColor="White" Grid.Column="0" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_back_3" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_4" CornerRadius="30" BackgroundColor="White" Grid.Column="1" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_back_4" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
             </Grid>
             <Frame CornerRadius="20">
                 <Label x:Name="Sorcepanel"></Label>

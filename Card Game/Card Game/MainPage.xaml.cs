@@ -22,8 +22,8 @@ namespace Card_Game
             radialGradientBrush.Radius = 1.5;
             radialGradientBrush.GradientStops = new GradientStopCollection()
             {
-                new GradientStop(){ Color = Color.FromHex("#7749D9"), Offset = 0 },
-                new GradientStop(){ Color = Color.FromHex("#B16EF5"), Offset = 1 }
+                new GradientStop(){ Color = Color.FromHex("#6231CC"), Offset = 0 },
+                new GradientStop(){ Color = Color.FromHex("#7A4AE0"), Offset = 1 }
             };
 
             button_register.Background = radialGradientBrush;

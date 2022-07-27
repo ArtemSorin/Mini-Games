@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Card_Game.TicTacToePage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Tic Tac Toe" HorizontalTextAlignment="Center" Margin="0, 0, 85, 0"
+                   FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Margin="30">
+            <Grid HeightRequest="300" HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="95" />
+                    <ColumnDefinition Width="95" />
+                    <ColumnDefinition Width="95" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="95" />
+                    <RowDefinition Height="95" />
+                    <RowDefinition Height="95" />
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="button1" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="button2" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="button3" CornerRadius="30" Grid.Column="0" Grid.Row="2"></ImageButton>
+                <ImageButton x:Name="button4" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="button5" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="button6" CornerRadius="30" Grid.Column="1" Grid.Row="2"></ImageButton>
+                <ImageButton x:Name="button7" CornerRadius="30" Grid.Column="2" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="button8" CornerRadius="30" Grid.Column="2" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="button9" CornerRadius="30" Grid.Column="2" Grid.Row="2"></ImageButton>
+            </Grid>
+            <Frame Margin="30" CornerRadius="20">
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="first_player_panel" Grid.Column="0" Text="Игрок 1: (0) "></Label>
+                    <Label x:Name="second_player_panel"  Grid.Column="1" Text="Игрок 2: (0) "></Label>
+                </Grid>
+            </Frame>
+            <Button x:Name="button_new_round" Margin="30, 0, 30, 0" Text="Ещё раунд!" TextColor="White"
+                    FontAttributes="Bold" CornerRadius="20"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
