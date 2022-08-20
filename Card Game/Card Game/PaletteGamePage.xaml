@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Card_Game.PaletteGamePage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Palette Game" HorizontalTextAlignment="Center" Margin="0, 0, 85, 0"
+                   FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="0, 20, 0, 0" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="blue_button" BackgroundColor="Aqua" Grid.Column="0" CornerRadius="10"></Button>
+                <Button x:Name="yellow_button" BackgroundColor="Aqua" Grid.Column="1" CornerRadius="10"></Button>
+                <Button x:Name="red_button" BackgroundColor="Aqua" Grid.Column="2" CornerRadius="10"></Button>
+                <Button x:Name="green_button" BackgroundColor="Aqua" Grid.Column="3" CornerRadius="10"></Button>
+            </Grid>
+            <Grid Margin="0, 20, 0, 0" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="40" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="button1" Grid.Column="0" Grid.Row="0" CornerRadius="10"></Button>
+                <Button x:Name="button2" Grid.Column="1" Grid.Row="0" CornerRadius="10"></Button>
+                <Button x:Name="button3" Grid.Column="2" Grid.Row="0" CornerRadius="10"></Button>
+                <Button x:Name="button4" Grid.Column="3" Grid.Row="0" CornerRadius="10"></Button>
+                <Button x:Name="button5" Grid.Column="4" Grid.Row="0" CornerRadius="10"></Button>
+                <Button x:Name="button6" Grid.Column="5" Grid.Row="0" CornerRadius="10"></Button>
+                <Button x:Name="button7" Grid.Column="0" Grid.Row="1" CornerRadius="10"></Button>
+                <Button x:Name="button8" Grid.Column="1" Grid.Row="1" CornerRadius="10"></Button>
+                <Button x:Name="button9" Grid.Column="2" Grid.Row="1" CornerRadius="10"></Button>
+                <Button x:Name="button10" Grid.Column="3" Grid.Row="1" CornerRadius="10"></Button>
+                <Button x:Name="button11" Grid.Column="4" Grid.Row="1" CornerRadius="10"></Button>
+                <Button x:Name="button12" Grid.Column="5" Grid.Row="1" CornerRadius="10"></Button>
+                <Button x:Name="button13" Grid.Column="0" Grid.Row="2" CornerRadius="10"></Button>
+                <Button x:Name="button14" Grid.Column="1" Grid.Row="2" CornerRadius="10"></Button>
+                <Button x:Name="button15" Grid.Column="2" Grid.Row="2" CornerRadius="10"></Button>
+                <Button x:Name="button16" Grid.Column="3" Grid.Row="2" CornerRadius="10"></Button>
+                <Button x:Name="button17" Grid.Column="4" Grid.Row="2" CornerRadius="10"></Button>
+                <Button x:Name="button18" Grid.Column="5" Grid.Row="2" CornerRadius="10"></Button>
+                <Button x:Name="button19" Grid.Column="0" Grid.Row="3" CornerRadius="10"></Button>
+                <Button x:Name="button20" Grid.Column="1" Grid.Row="3" CornerRadius="10"></Button>
+                <Button x:Name="button21" Grid.Column="2" Grid.Row="3" CornerRadius="10"></Button>
+                <Button x:Name="button22" Grid.Column="3" Grid.Row="3" CornerRadius="10"></Button>
+                <Button x:Name="button23" Grid.Column="4" Grid.Row="3" CornerRadius="10"></Button>
+                <Button x:Name="button24" Grid.Column="5" Grid.Row="3" CornerRadius="10"></Button>
+                <Button x:Name="button25" Grid.Column="0" Grid.Row="4" CornerRadius="10"></Button>
+                <Button x:Name="button26" Grid.Column="1" Grid.Row="4" CornerRadius="10"></Button>
+                <Button x:Name="button27" Grid.Column="2" Grid.Row="4" CornerRadius="10"></Button>
+                <Button x:Name="button28" Grid.Column="3" Grid.Row="4" CornerRadius="10"></Button>
+                <Button x:Name="button29" Grid.Column="4" Grid.Row="4" CornerRadius="10"></Button>
+                <Button x:Name="button30" Grid.Column="5" Grid.Row="4" CornerRadius="10"></Button>
+                <Button x:Name="button31" Grid.Column="0" Grid.Row="5" CornerRadius="10"></Button>
+                <Button x:Name="button32" Grid.Column="1" Grid.Row="5" CornerRadius="10"></Button>
+                <Button x:Name="button33" Grid.Column="2" Grid.Row="5" CornerRadius="10"></Button>
+                <Button x:Name="button34" Grid.Column="3" Grid.Row="5" CornerRadius="10"></Button>
+                <Button x:Name="button35" Grid.Column="4" Grid.Row="5" CornerRadius="10"></Button>
+                <Button x:Name="button36" Grid.Column="5" Grid.Row="5" CornerRadius="10"></Button>
+            </Grid>
+            <Grid Margin="0, 20, 0, 0" HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Горизонт" CornerRadius="10" Grid.Column="0"></Button>
+                <Button Text="Вертикаль" CornerRadius="10"  Grid.Column="1"></Button>
+            </Grid>
+            <Button Margin="0, 20, 0, 0" Text="next"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

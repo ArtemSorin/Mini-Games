@@ -12,12 +12,14 @@ namespace Card_Game
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CardLevelFirstPage : ContentPage
     {
-        int sorce = 0;
+        int score = 0;
         const int cards_count = 4;
         public struct cards
         {
             public string image_front;
             public int card_number;
+            public bool correct;
+            public bool nonselected;
         }
         public CardLevelFirstPage()
         {
@@ -37,26 +39,26 @@ namespace Card_Game
             change_level.Background = radialGradientBrush;
             show_cards.Background = radialGradientBrush;
 
-            bool[] count_correct = new bool[cards_count];
-            bool[] count_nonselected = new bool[cards_count];
+            cards[] mas = new cards[cards_count];
+            int[] mas_numbers = new int[cards_count];
 
-            for (int i = 0; i < count_correct.Length; i++) { count_correct[i] = false; }
-            for (int i = 0; i < count_nonselected.Length; i++) { count_nonselected[i] = true; }
-
-            Sorcepanel.Text = $"Рекорд: {sorce} / {count_correct.Length * 10 / 2}";
+            Sorcepanel.Text = $"Рекорд: {score} / {mas.Length * 10 / 2}";
 
             ImageButton[] mas_buttons_card = new ImageButton[]
             {
                 btn_front_1, btn_front_2, btn_front_3, btn_front_4, btn_back_1, btn_back_2, btn_back_3, btn_back_4
             };
 
-            cards[] mas = new cards[cards_count];
-            int[] mas_numbers = new int[cards_count];
-
             mas[0].image_front = "card_cheese.png"; mas[0].card_number = 0;
             mas[1].image_front = "card_cheese.png"; mas[1].card_number = 0;
             mas[2].image_front = "card_flashlight.png"; mas[2].card_number = 1;
             mas[3].image_front = "card_flashlight.png"; mas[3].card_number = 1;
+
+            for (int i = 0; i < mas.Length; i++)
+            {
+                mas[i].correct = false;
+                mas[i].nonselected = true;
+            }
 
             var random = new Random();
             var numbers = Enumerable.Range(0, cards_count).OrderBy(n => random.Next()).ToArray();
@@ -83,10 +85,10 @@ namespace Card_Game
             change_level.Clicked += (sender, e) => { Navigation.PushAsync(new CardLevelSecondPage()); };
             show_cards.Clicked += (sender, e) => { function_show_cards(mas_buttons_card); };
 
-            btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, count_nonselected, count_correct, btn_back_1, btn_front_1, mas_buttons_card, List); };
-            btn_back_2.Clicked += (sender, e) => { player.Play(); function_back_to_front(1, count_nonselected, count_correct, btn_back_2, btn_front_2, mas_buttons_card, List); };
-            btn_back_3.Clicked += (sender, e) => { player.Play(); function_back_to_front(2, count_nonselected, count_correct, btn_back_3, btn_front_3, mas_buttons_card, List); };
-            btn_back_4.Clicked += (sender, e) => { player.Play(); function_back_to_front(3, count_nonselected, count_correct, btn_back_4, btn_front_4, mas_buttons_card, List); };
+            btn_back_1.Clicked += (sender, e) => { player.Play(); function_back_to_front(0, mas, btn_back_1, btn_front_1, mas_buttons_card, List); };
+            btn_back_2.Clicked += (sender, e) => { player.Play(); function_back_to_front(1, mas, btn_back_2, btn_front_2, mas_buttons_card, List); };
+            btn_back_3.Clicked += (sender, e) => { player.Play(); function_back_to_front(2, mas, btn_back_3, btn_front_3, mas_buttons_card, List); };
+            btn_back_4.Clicked += (sender, e) => { player.Play(); function_back_to_front(3, mas, btn_back_4, btn_front_4, mas_buttons_card, List); };
 
             for (int i = mas_buttons_card.Length / 2; i < mas_buttons_card.Length; i++)
             {
@@ -98,42 +100,48 @@ namespace Card_Game
                 mas_buttons_card[i].BackgroundColor = Color.White;
             }
         }
-        private async void function_back_to_front(int number, bool[] count_nonselected, bool[] count_correct, ImageButton btn_back, ImageButton btn_front, ImageButton[] mas_buttons_card, List<KeyValuePair<int, int>> mas)
+        private async void function_back_to_front(int number, cards[] mas_card, ImageButton btn_back, ImageButton btn_front, ImageButton[] mas_buttons_card, List<KeyValuePair<int, int>> mas)
         {
             await btn_back.RotateYTo(90, 150);
             await btn_front.RotateYTo(0, 150);
 
-            count_correct[number] = true;
-            count_nonselected[number] = false;
+            mas_card[number].correct = true;
+            mas_card[number].nonselected = false;
 
             int count = 0;
 
-            for (int i = 0; i < count_correct.Length; i++) { if (count_correct[i]) { count++; } }
+            for (int i = 0; i < mas_card.Length; i++) 
+            { 
+                if (mas_card[i].correct) 
+                { 
+                    count++; 
+                }
+            }
 
             if (count > 1)
             {
                 bool flag_find_correct = false;
 
-                for (int i = 0; i < count_correct.Length / 2; i++)
+                for (int i = 0; i < mas_card.Length / 2; i++)
                 {
-                    if (count_correct[mas[i].Key] && count_correct[mas[i].Value])
+                    if (mas_card[mas[i].Key].correct && mas_card[mas[i].Value].correct)
                     {
-                        function_correct(mas_buttons_card[mas[i].Key], mas_buttons_card[mas[i].Value], count_correct, mas[i].Key, mas[i].Value);
-                        sorce += 10;
+                        function_correct(mas_buttons_card[mas[i].Key], mas_buttons_card[mas[i].Value], mas_card, mas[i].Key, mas[i].Value);
+                        score += 10;
                         flag_find_correct = true;
                     }
                 }
 
                 if (!flag_find_correct)
                 {
-                    function_non_correct(number, btn_front, btn_back, count_correct, count_nonselected);
-                    sorce -= 5;
+                    function_non_correct(number, btn_front, btn_back, mas_card);
+                    score -= 5;
                 }
             }
 
-            Sorcepanel.Text = $"Рекорд: {sorce} / {count_correct.Length * 10 / 2}";
+            Sorcepanel.Text = $"Рекорд: {score} / {mas_card.Length * 10 / 2}";
 
-            if (function_is_all_open(count_nonselected) && sorce >= (count_correct.Length * 10 / 2) * 0.75)
+            if (function_is_all_open(mas_card) && score >= (mas_card.Length * 10 / 2) * 0.75)
             {
                 await DisplayAlert("", "Уровень пройден!", "ок");
                 change_level.IsEnabled = true;
@@ -162,27 +170,27 @@ namespace Card_Game
                 mas_buttons_card[i].IsEnabled = true;
             }
         }
-        private void function_correct(ImageButton btn1, ImageButton btn2, bool[] count_correct, int index1, int index2)
+        private void function_correct(ImageButton btn1, ImageButton btn2, cards[] mas_card, int index1, int index2)
         {
             btn1.IsEnabled = false;
             btn2.IsEnabled = false;
 
-            count_correct[index1] = false;
-            count_correct[index2] = false;
+            mas_card[index1].correct = false;
+            mas_card[index2].correct = false;
         }
-        private async void function_non_correct(int number, ImageButton btn1, ImageButton btn2, bool[] count_correct, bool[] count_nonselected)
+        private async void function_non_correct(int number, ImageButton btn1, ImageButton btn2, cards[] mas_card)
         {
             await btn1.RotateYTo(90, 150);
             await btn2.RotateYTo(0, 150);
 
-            count_correct[number] = false;
-            count_nonselected[number] = true;
+            mas_card[number].correct = false;
+            mas_card[number].nonselected = true;
         }
-        private bool function_is_all_open(bool[] count_nonselected)
+        private bool function_is_all_open(cards[] mas_card)
         {
-            for(int i = 0; i < count_nonselected.Length; i++)
+            for(int i = 0; i < mas_card.Length; i++)
             {
-                if (count_nonselected[i])
+                if (mas_card[i].nonselected)
                 {
                     return false;
                 }

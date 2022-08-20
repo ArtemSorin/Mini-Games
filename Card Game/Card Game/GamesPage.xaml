@@ -3,12 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Card_Game.GamesPage"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms" 
              xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        
         <Grid>
             <gradient:SfGradientView>
                 <gradient:SfGradientView.BackgroundBrush>
@@ -34,9 +32,36 @@
                 </Path.Data>
             </Path>
             <StackLayout>
-                <Label Margin="200, 50, 0, 0" Text="Аккаунт:" FontAttributes="Bold" TextColor="White"></Label>
-                <Label x:Name="MyUserName" Margin="200, 0, 0, 0" FontAttributes="Bold" TextColor="White"></Label>
-                <Button Margin="200, 0, 50, 0" CornerRadius="20" Clicked="Logout_Clicked" BackgroundColor="White" HeightRequest="40" Text="Выйти"></Button>
+                <Grid Margin="10, 60, 50, 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Path Fill="#6231CC" Stroke="#9d4ce5" StrokeThickness="10">
+                        <Path.Data>
+                            <EllipseGeometry Center="75,60" RadiusX="50" RadiusY="50" />
+                        </Path.Data>
+                    </Path>
+                    <StackLayout Grid.Column="0">
+                        <ImageButton Source="image.png" Margin="35, 20, 35, 0" HeightRequest="80" WidthRequest="80" CornerRadius="100"></ImageButton>
+                    </StackLayout>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+                        <Label x:Name="MyUserName" Text="Artem" FontAttributes="Bold" FontSize="Large" TextColor="White" Grid.Row="0"></Label>
+                        <Label Text="Уровень 12" TextColor="White" FontAttributes="Bold" Grid.Row="1"></Label>
+                        <ProgressBar x:Name="progressbar" Progress="0.4" ProgressColor="White" Grid.Row="2"></ProgressBar>
+                    </Grid>
+                </Grid>
             </StackLayout>
             <Grid HorizontalOptions="Center" Margin="0, 200, 0, 0">
                 <Grid.ColumnDefinitions>
@@ -53,7 +78,7 @@
             </Grid>
             <ScrollView Margin="20, 250, 20, 20">
                 <StackLayout HeightRequest="1000">
-                    <Frame HeightRequest="150" Margin="0, 30, 0, 0" CornerRadius="20">
+                    <Frame HeightRequest="180" Margin="0, 30, 0, 0" CornerRadius="20">
                         <StackLayout>
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -88,7 +113,7 @@
                             </Grid>
                         </StackLayout>
                     </Frame>
-                    <Frame HeightRequest="150" Margin="0, 30, 0, 0" CornerRadius="20">
+                    <Frame HeightRequest="180" Margin="0, 30, 0, 0" CornerRadius="20">
                         <StackLayout>
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -123,7 +148,7 @@
                             </Grid>
                         </StackLayout>
                     </Frame>
-                    <Frame HeightRequest="150" Margin="0, 30, 0, 0" CornerRadius="20">
+                    <Frame HeightRequest="180" Margin="0, 30, 0, 0" CornerRadius="20">
                         <StackLayout>
                             <Grid>
                                 <Grid.ColumnDefinitions>
@@ -155,6 +180,41 @@
                                     </buttons:SfButton>
                                 </Grid>
                                 <Image Source="game_tictac.png" Grid.Column="1"></Image>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HeightRequest="180" Margin="0, 30, 0, 0" CornerRadius="20">
+                        <StackLayout>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Label Text="Палитра красок" TextColor="Black" FontAttributes="Bold" FontSize="Large" Grid.Column="0" Grid.Row="0"></Label>
+                                    <Label Text="Раскрась палитру по заданию" Grid.Column="0" Grid.Row="1"></Label>
+                                    <buttons:SfButton x:Name="palette_game" Text="ИГРАТЬ" Grid.Column="0" Grid.Row="2" FontAttributes="Bold" CornerRadius="50">
+                                        <buttons:SfButton.BackgroundGradient>
+                                            <gradient:SfRadialGradientBrush Radius="1.5">
+                                                <gradient:SfRadialGradientBrush.GradientStops>
+                                                    <gradient:SfGradientStop Color="#9d4ce5" Offset="0"/>
+                                                    <gradient:SfGradientStop Color="#6231CC" Offset="1"/>
+                                                </gradient:SfRadialGradientBrush.GradientStops>
+                                            </gradient:SfRadialGradientBrush>
+                                        </buttons:SfButton.BackgroundGradient>
+                                    </buttons:SfButton>
+                                </Grid>
+                                <Image Source="game_palette.png" Grid.Column="1"></Image>
                             </Grid>
                         </StackLayout>
                     </Frame>
