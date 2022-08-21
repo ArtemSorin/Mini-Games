@@ -2,12 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Card_Game.CardLevelSecondPage">
-    <NavigationPage.TitleView>
-        <StackLayout>
-            <Label Text="Уровень 2" HorizontalTextAlignment="Center" Margin="0, 0, 75, 0"
-                   FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
-        </StackLayout>
-    </NavigationPage.TitleView>
     <ScrollView>
         <StackLayout Padding="20" HeightRequest="240" BackgroundColor="White" HorizontalOptions="Center">
             <Grid >

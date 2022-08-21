@@ -4,16 +4,47 @@
              xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              x:Class="Card_Game.CardLevelFirstPage"
              NavigationPage.HasNavigationBar="False">
-    <Grid>
-        <gradient:SfGradientView>
-            <gradient:SfGradientView.BackgroundBrush>
-                <gradient:SfLinearGradientBrush StartPoint="1,0.3">
-                    <gradient:SfLinearGradientBrush.GradientStops>
-                        <gradient:SfGradientStop Color="#6231CC" Offset="0" />
-                        <gradient:SfGradientStop Color="White" Offset="0.5" />
-                    </gradient:SfLinearGradientBrush.GradientStops>
-                </gradient:SfLinearGradientBrush>
-            </gradient:SfGradientView.BackgroundBrush>
-        </gradient:SfGradientView>
-    </Grid>
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Уровень 1" HorizontalTextAlignment="Center" Margin="0, 0, 75, 0"
+                   FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <StackLayout Padding="20" HeightRequest="240" BackgroundColor="White" HorizontalOptions="Center">
+            <Grid HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ImageButton x:Name="btn_front_1" CornerRadius="30" BackgroundColor="White" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_back_1" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="0" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_2" CornerRadius="30" BackgroundColor="White" Grid.Column="1" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_back_2" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="1" Grid.Row="0"></ImageButton>
+                <ImageButton x:Name="btn_front_3" CornerRadius="30" BackgroundColor="White" Grid.Column="0" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_back_3" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="0" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_front_4" CornerRadius="30" BackgroundColor="White" Grid.Column="1" Grid.Row="1"></ImageButton>
+                <ImageButton x:Name="btn_back_4" BackgroundColor="White" Source="background_of_card.png" CornerRadius="30" Grid.Column="1" Grid.Row="1"></ImageButton>
+            </Grid>
+            <Frame CornerRadius="20">
+                <Label x:Name="Sorcepanel"></Label>
+            </Frame>
+            <Grid HorizontalOptions="FillAndExpand" RowSpacing="20" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" Orientation="Horizontal" Spacing="20">
+                    <Button x:Name="change_level" WidthRequest="150" CornerRadius="30" Grid.Row="0" 
+                            TextColor="White" Text="Следующий уровень" IsEnabled="False"></Button>
+                    <Button x:Name="show_cards" WidthRequest="150" CornerRadius="30" Grid.Row="0"
+                            TextColor="White" Text="Открыть карты" IsEnabled="True"></Button>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
