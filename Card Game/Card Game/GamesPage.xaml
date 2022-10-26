@@ -25,7 +25,7 @@
                     <PathGeometry>
                         <PathFigure StartPoint="300, 50">
                             <ArcSegment Size="100, 100"
-                            Point="300, 49.9"
+                            Point="300, 49.999999"
                             IsLargeArc="True" />
                         </PathFigure>
                     </PathGeometry>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              x:Class="Card_Game.TicTacToePage">
     <NavigationPage.TitleView>
         <StackLayout>
@@ -8,7 +9,17 @@
                    FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
         </StackLayout>
     </NavigationPage.TitleView>
-    <ContentPage.Content>
+    <Grid>
+        <gradient:SfGradientView>
+            <gradient:SfGradientView.BackgroundBrush>
+                <gradient:SfLinearGradientBrush StartPoint="1,0.3">
+                    <gradient:SfLinearGradientBrush.GradientStops>
+                        <gradient:SfGradientStop Color="#6231CC" Offset="0" />
+                        <gradient:SfGradientStop Color="White" Offset="0.5" />
+                    </gradient:SfLinearGradientBrush.GradientStops>
+                </gradient:SfLinearGradientBrush>
+            </gradient:SfGradientView.BackgroundBrush>
+        </gradient:SfGradientView>
         <StackLayout Margin="30">
             <Grid HeightRequest="300" HorizontalOptions="Center">
                 <Grid.ColumnDefinitions>
@@ -44,5 +55,5 @@
             <Button x:Name="button_new_round" Margin="30, 0, 30, 0" Text="Ещё раунд!" TextColor="White"
                     FontAttributes="Bold" CornerRadius="20"></Button>
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>
