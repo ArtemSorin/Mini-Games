@@ -1,4 +1,4 @@
-# Card-Game
+# Mini Games
 
 ## :fire:Мобильно приложение c мини играми:boom:
 
